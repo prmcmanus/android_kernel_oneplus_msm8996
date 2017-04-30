@@ -76,6 +76,8 @@ static void send_input(int keyCode)
 static void switch_dev_work(struct work_struct *work)
 {
 	int keyCode, mode, key_state[3];
+	mode = 1;
+	keyCode = 601;
 
 	key_state[0] = gpio_get_value(switch_data->key1_gpio);
 	key_state[1] = gpio_get_value(switch_data->key2_gpio);
